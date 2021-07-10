@@ -1,13 +1,13 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
-    'name' => 'uyu/menu_application',
+    'reference' => '6ad170bb876b95f83f722419d46b3a645e5f87d6',
+    'name' => 'uyu/menu',
   ),
   'versions' => 
   array (
@@ -312,14 +312,14 @@
       ),
       'reference' => '75a63c33a8577608444246075ea0af0d052e452a',
     ),
-    'uyu/menu_application' => 
+    'uyu/menu' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '6ad170bb876b95f83f722419d46b3a645e5f87d6',
     ),
     'webmozart/assert' => 
     array (
