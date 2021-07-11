@@ -1,6 +1,6 @@
 <?php
 
-namespace Menu;
+namespace Uyu;
 
 class Recipe
 {
