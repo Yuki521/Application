@@ -38,12 +38,18 @@ class MenuSet extends Menu
    *
    * @return array
    */
-  public function getMenuByType()
+  public function getMenuByType($type)
   {
-    // $menus = $this->getMenus();
-    // //きっとMenuのgetType()を使う。
-    // $t = $this->getType("和食");
-    // return $t;
+    $array_menu = [];
+    foreach ($this->getMenus() as $menukey => $menu) {
+      $array_menu[] = $this->getMenus()[$menukey]->getType();
+    }
+    $getkeys = array_keys($array_menu, $type);
+    $getmenubytype = [];
+    foreach ($getkeys as $getkey) {
+      $getmenubytype[] = $this->getMenus()[$getkey];
+    }
+    return $getmenubytype;
   }
 
   /**
