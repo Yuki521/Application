@@ -12,7 +12,7 @@ class Recipe
     /**
      * @var float カロリー
      */
-    public float $cal;
+    private float $cal;
 
     /**
      * Recip constructor.

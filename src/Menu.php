@@ -2,8 +2,9 @@
 
 namespace Uyu;
 
+use Uyu\Recipe;
 
-class Menu
+class Menu extends Recipe
 {
     /**
      * @var string 料理名
@@ -58,11 +59,12 @@ class Menu
      *
      * @return void
      */
-    public function getCal()
+    public function getCals()
     {
-        $getCals = array_column($this->recipes, ("cal"));
-        $sumCal = array_sum($getCals);
-        return ($sumCal);
+        //RecipeのgetCalを使う
+        $getcal = $this->getType();
+        $recipe = Recipe::getCal($getcal);
+        return $recipe;
     }
 
     /**
