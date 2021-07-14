@@ -40,12 +40,12 @@ $menu3 = new Menu("のり弁当", "和食", [$recipe4, $recipe5]);
 // $menus = $menuSet->getMenus(); //メニューの一覧を取得
 
 
-/******** 問題3 **********/
+/******** 問題4 **********/
 $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
 $menus = $menuSet->getMenuByType("和食"); //メニューの一覧を取得
 var_dump($menus);
 
 // var_dump($menuSet->getType($menu->gettype()));
 
-/******** 問題4 **********/
+/******** 問題5 **********/
 // $menus = $menuSet->getMenuByCalorie(100); //メニューの一覧を取得
