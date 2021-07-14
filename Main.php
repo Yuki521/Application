@@ -31,7 +31,7 @@ $menu3 = new Menu("のり弁当", "和食", [$recipe4, $recipe5]);
 /******** 問題2 **********/
 // echo $menu->getName(), PHP_EOL; //ハンバーグ弁当
 // echo $menu->getType(), PHP_EOL; // 洋食
-echo $menu->getCal(); //int(320.5)
+var_dump($menu->getCal()); //int(320.5)
 // echo $menu->getRecipes()[0]->getName(), PHP_EOL; // ハンバーグ
 
 
