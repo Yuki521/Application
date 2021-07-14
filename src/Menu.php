@@ -62,9 +62,8 @@ class Menu
     public function getCal()
     {
         $array_cal = [];
-        $recipes = $this->getRecipes();
-        foreach ($recipes as $recipekey => $recipe) {
-            $array_cal[] = $recipes[$recipekey]->getCal();
+        foreach ($this->getRecipes() as $recipekey => $recipe) {
+            $array_cal[] = $this->getRecipes()[$recipekey]->getCal();
         }
         return array_sum($array_cal);
     }
