@@ -38,7 +38,7 @@ class MenuSet extends Menu
      *
      * @return array
      */
-    public function getMenuByType($type)
+    public function getMenusByType($type)
     {
         /******** 自分 **********/
         // $array_menu = [];
@@ -46,11 +46,11 @@ class MenuSet extends Menu
         //   $array_menu[] = $this->getMenus()[$menukey]->getType();
         // }
         // $getkeys = array_keys($array_menu, $type);
-        // $getmenubytype = [];
+        // $getMenusByType = [];
         // foreach ($getkeys as $getkey) {
-        //   $getmenubytype[] = $this->getMenus()[$getkey];
+        //   $getMenusByType[] = $this->getMenus()[$getkey];
         // }
-        // return $getmenubytype;
+        // return $getMenusByType;
 
         /******** 通常 **********/
         // $menus = [];
@@ -75,7 +75,7 @@ class MenuSet extends Menu
      *
      * @return array
      */
-    public function getMenuByCalorie(int $cal)
+    public function getMenusByCalorie(int $cal)
     {
         /******** 一般 **********/
         // $menus = [];

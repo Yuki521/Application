@@ -42,10 +42,24 @@ $menu3 = new Menu("のり弁当", "和食", [$recipe4, $recipe5]);
 
 /******** 問題4✔️  **********/
 // $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
-// $menus = $menuSet->getMenuByType("和食"); //メニューの一覧を取得
+// $menus = $menuSet->getMenusByType("和食"); //メニューの一覧を取得
 // var_dump($menus);
 
-/******** 問題5 **********/
+/******** 問題5✔️ **********/
+// $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
+// $menus = $menuSet->getMenusByCalorie(100); //メニューの一覧を取得
+// var_dump($menus);
+
+/******** 問題6 **********/
+/**
+ * メニュー（$menu）が条件を満たす場合にtrueを返す。
+ */
+function spec(Menu $menu): bool
+{
+}
+
 $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
-$menus = $menuSet->getMenuByCalorie(100); //メニューの一覧を取得
-var_dump($menus);
+
+$menus = $menuSet->getMenusBySpec(function (Menu $menu) {
+    return true;
+});   // すべてのメニューを返す。
