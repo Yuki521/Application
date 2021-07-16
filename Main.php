@@ -11,8 +11,8 @@ use Uyu\Recipe;
 $recipe1 = new Recipe("ハンバーグ", 200.5);
 $recipe2 = new Recipe("目玉焼き", 120);
 $recipe3 = new Recipe("鮭", 130);
-$recipe4 = new Recipe("卵焼き", 110);
-$recipe5 = new Recipe("海苔", 50);
+$recipe4 = new Recipe("卵焼き", 90);
+$recipe5 = new Recipe("海苔", 5);
 
 $menu = new Menu("ハンバーグ弁当", "洋食", [$recipe1, $recipe2]);
 
@@ -38,14 +38,14 @@ $menu3 = new Menu("のり弁当", "和食", [$recipe4, $recipe5]);
 /******** 問題3✔️ **********/
 // $menuSet = new MenuSet([$menu1, $menu2]);
 // $menus = $menuSet->getMenus(); //メニューの一覧を取得
+// var_dump($menus);
 
-
-/******** 問題4 **********/
-$menuSet = new MenuSet([$menu1, $menu2, $menu3]);
-$menus = $menuSet->getMenuByType("和食"); //メニューの一覧を取得
-var_dump($menus);
-
-// var_dump($menuSet->getType($menu->gettype()));
+/******** 問題4✔️  **********/
+// $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
+// $menus = $menuSet->getMenuByType("和食"); //メニューの一覧を取得
+// var_dump($menus);
 
 /******** 問題5 **********/
-// $menus = $menuSet->getMenuByCalorie(100); //メニューの一覧を取得
+$menuSet = new MenuSet([$menu1, $menu2, $menu3]);
+$menus = $menuSet->getMenuByCalorie(100); //メニューの一覧を取得
+var_dump($menus);

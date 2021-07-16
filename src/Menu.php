@@ -61,11 +61,24 @@ class Menu
      */
     public function getCal()
     {
-        $array_cal = [];
-        foreach ($this->getRecipes() as $recipekey => $recipe) {
-            $array_cal[] = $this->getRecipes()[$recipekey]->getCal();
-        }
-        return array_sum($array_cal);
+        /******** 自分 **********/
+        // $array_cal = [];
+        // foreach ($this->getRecipes() as $recipekey => $recipe) {
+        //     $array_cal[] = $this->getRecipes()[$recipekey]->getCal();
+        // }
+        // return array_sum($array_cal);
+
+        /******** 一般的 **********/
+        // $total = 0;
+        // foreach ($this->getRecipes() as $recipe) {
+        //     $total += $recipe->getCal();
+        // }
+        // return $total;
+
+        /******** 高階関数利用 **********/
+        return array_sum(array_map(function (Recipe $recipe) {
+            return $recipe->getCal();
+        }, $this->recipes));
     }
 
     /**

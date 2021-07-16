@@ -7,61 +7,91 @@ use Uyu\Menu;
 
 class MenuSet extends Menu
 {
-  /**
-   * @var array レシピ
-   */
-  private  array $menus;
+    /**
+     * @var array レシピ
+     */
+    private  array $menus;
 
-  /**
-   * Recip constructor.
-   *
-   * @param string $name
-   * @param float $type
-   */
-  public function __construct(array $menus)
-  {
-    $this->menus = $menus;
-  }
-
-  /**
-   * create cal.
-   *
-   * @return array
-   */
-  public function getMenus(): array
-  {
-    return $this->menus;
-  }
-
-  /**
-   * create cal.
-   *
-   * @return array
-   */
-  public function getMenuByType($type)
-  {
-    $array_menu = [];
-    foreach ($this->getMenus() as $menukey => $menu) {
-      $array_menu[] = $this->getMenus()[$menukey]->getType();
+    /**
+     * Recip constructor.
+     *
+     * @param string $name
+     * @param float $type
+     */
+    public function __construct(array $menus)
+    {
+        $this->menus = $menus;
     }
-    $getkeys = array_keys($array_menu, $type);
-    $getmenubytype = [];
-    foreach ($getkeys as $getkey) {
-      $getmenubytype[] = $this->getMenus()[$getkey];
-    }
-    return $getmenubytype;
-  }
 
-  /**
-   * create cal.
-   *
-   * @return array
-   */
-  public function getMenuByCalorie()
-  {
-    // $menus = $this->getMenus();
-    // //きっとMenuのgetCal()を使う。
-    // $t = $this->getType("和食");
-    // return $t;
-  }
+    /**
+     * create cal.
+     *
+     * @return array
+     */
+    public function getMenus(): array
+    {
+        return $this->menus;
+    }
+
+    /**
+     * create cal.
+     *
+     * @return array
+     */
+    public function getMenuByType($type)
+    {
+        /******** 自分 **********/
+        // $array_menu = [];
+        // foreach ($this->getMenus() as $menukey => $menu) {
+        //   $array_menu[] = $this->getMenus()[$menukey]->getType();
+        // }
+        // $getkeys = array_keys($array_menu, $type);
+        // $getmenubytype = [];
+        // foreach ($getkeys as $getkey) {
+        //   $getmenubytype[] = $this->getMenus()[$getkey];
+        // }
+        // return $getmenubytype;
+
+        /******** 通常 **********/
+        // $menus = [];
+        // foreach ($this->getMenus() as $menu) {
+        //   if ($menu->gettype() == $type) {
+        //     $menus[] = $menu;
+        //   }
+        // }
+        // return $menus;
+
+        /******** 高階関数 **********/
+        return  array_filter(
+            $this->menus,
+            function (Menu $menu) use ($type) {
+                return $menu->getType() == $type;
+            }
+        );
+    }
+
+    /**
+     * create cal.
+     *
+     * @return array
+     */
+    public function getMenuByCalorie(int $cal)
+    {
+        /******** 一般 **********/
+        // $menus = [];
+        // foreach ($this->getMenus() as $menu) {
+        //     if ($menu->getCal() >= $cal) {
+        //         $menus[] = $menu;
+        //     }
+        // }
+        // return $menus;
+
+        /******** 高階関数 **********/
+        return array_filter(
+            $this->getMenus(),
+            function (Menu $menu) use ($cal) {
+                return $menu->getCal() >= $cal;
+            }
+        );
+    }
 }
