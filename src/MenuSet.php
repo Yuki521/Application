@@ -94,4 +94,26 @@ class MenuSet extends Menu
             }
         );
     }
+
+    /**
+     * メニュー（$menu）が条件を満たす場合にtrueを返す。
+     */
+    // function spec(Menu $menu): bool
+
+    /**
+     * trueであればメニューを返します。
+     *
+     * @param callable $spec
+     * @return array
+     */
+    public function getMenusBySpec(callable $spec): array
+    {
+        $filtered = [];
+        foreach ($this->getMenus() as $menu) {
+            if ($spec($menu)) {
+                $filtered[] = $menu;
+            }
+        }
+        return $filtered;
+    }
 }

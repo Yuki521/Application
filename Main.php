@@ -51,37 +51,22 @@ $menu3 = new Menu("のり弁当", "和食", [$recipe4, $recipe5]);
 // var_dump($menus);
 
 /******** 問題6 **********/
-
-
 $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
-
-/**
- * メニュー（$menu）が条件を満たす場合にtrueを返す。
- */
-function spec(Menu $menu): bool
-
-function getMenusBySpec(callable $spec)
-{
-    $filtered = [];
-    foreach ($this->menu as $menu) {
-        if ($spec($menu)) {
-            $filtered[] = $menu;
-        }
-        return $filtered;
-    }
-}
-
 
 $menus = $menuSet->getMenusBySpec(function (Menu $menu) {
     return true;
 });   // すべてのメニューを返す。
 
-// $cal = 100;
-// $menus = $menuSet->getMenusBySpec(function (Menu $menu) use ($cal) {
-//     return $menu->getCal() >= $cal;
-// });   //カロリー100以上のメニューを返す。
+$cal = 100;
+$menus_cal = $menuSet->getMenusBySpec(function (Menu $menu) use ($cal) {
+    return $menu->getCal() >= $cal;
+});   //カロリー100以上のメニューを返す。
 
-// $type = '洋食';
-// $menus = $menuSet->getMenusBySpec(function (Menu $menu) use ($type) {
-//     return $menu->getType() == $type;
-// });   //洋食のメニューを返す。
+$type = '洋食';
+$menus_type = $menuSet->getMenusBySpec(function (Menu $menu) use ($type) {
+    return $menu->getType() == $type;
+});   //洋食のメニューを返す。
+
+var_dump($menus);
+var_dump($menus_cal);
+var_dump($menus_type);
