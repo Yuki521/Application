@@ -2,8 +2,9 @@
 
 namespace Uyu;
 
-use Uyu\Recipe;
 use Uyu\Menu;
+use Uyu\MenuSpec;
+use Uyu\Algorithm\MenuTypeSpec;
 
 class MenuSet extends Menu
 {
@@ -115,5 +116,13 @@ class MenuSet extends Menu
             }
         }
         return $filtered;
+    }
+
+    public function getMenusBySpecInterface(MenuSpec $menuspec)
+    {
+        switch ($menuspec) {
+            case '和食':
+                return new MenuTypeSpec();
+        }
     }
 }

@@ -4,6 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Uyu\MenuSet;
 use Uyu\Menu;
 use Uyu\Recipe;
+use Uyu\Algorithm\MenuTypeSpec;
 
 
 
@@ -51,22 +52,29 @@ $menu3 = new Menu("のり弁当", "和食", [$recipe4, $recipe5]);
 // var_dump($menus);
 
 /******** 問題6 **********/
-$menuSet = new MenuSet([$menu1, $menu2, $menu3]);
+// $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
 
-$menus = $menuSet->getMenusBySpec(function (Menu $menu) {
-    return true;
-});   // すべてのメニューを返す。
+// $menus = $menuSet->getMenusBySpec(function (Menu $menu) {
+//     return true;
+// });   // すべてのメニューを返す。
 
-$cal = 100;
-$menus_cal = $menuSet->getMenusBySpec(function (Menu $menu) use ($cal) {
-    return $menu->getCal() >= $cal;
-});   //カロリー100以上のメニューを返す。
+// $cal = 100;
+// $menus_cal = $menuSet->getMenusBySpec(function (Menu $menu) use ($cal) {
+//     return $menu->getCal() >= $cal;
+// });   //カロリー100以上のメニューを返す。
 
-$type = '洋食';
-$menus_type = $menuSet->getMenusBySpec(function (Menu $menu) use ($type) {
-    return $menu->getType() == $type;
-});   //洋食のメニューを返す。
+// $type = '洋食';
+// $menus_type = $menuSet->getMenusBySpec(function (Menu $menu) use ($type) {
+//     return $menu->getType() == $type;
+// });   //洋食のメニューを返す。
 
-var_dump($menus);
-var_dump($menus_cal);
-var_dump($menus_type);
+// var_dump($menus);
+// var_dump($menus_cal);
+// var_dump($menus_type);
+
+/******** 問題7 **********/
+$menuSet = new MenuSet([$menu1, $menu2, $menu3]); // $menu1, $menu2, $menu3はメニューオブジェクトとする。
+
+$menus1 = $menuSet->getMenusBySpecInterface(new MenuTypeSpec("和食")); // 和食のみのメニュー一覧を抽出
+var_dump($menu1);
+// $menus2 = $menuSet->getMenusBySpecInterface(new CalorieOverSpec(100));  // 100カロリー以上のメニュー一覧を抽出
