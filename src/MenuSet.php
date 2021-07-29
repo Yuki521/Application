@@ -2,6 +2,7 @@
 
 namespace Uyu;
 
+use Uyu\Algorithm\CalorieOverSpec;
 use Uyu\Menu;
 use Uyu\MenuSpec;
 use Uyu\Algorithm\MenuTypeSpec;
@@ -121,8 +122,10 @@ class MenuSet extends Menu
     public function getMenusBySpecInterface(MenuSpec $menuspec)
     {
         switch ($menuspec) {
-            case '和食':
+            case new MenuTypeSpec():
                 return new MenuTypeSpec();
+            case new CalorieOverSpec():
+                return new CalorieOverSpec();
         }
     }
 }

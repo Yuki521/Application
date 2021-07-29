@@ -1,14 +1,14 @@
 <?php
 
-namespace Uyu\Algorithm;
+namespace Uyu;
 
 use Uyu\Menu;
 use Uyu\MenuSpec;
 
-class MenuTypeSpec implements MenuSpec
+class Type implements MenuSpec
 {
     public function satisfiedBy(Menu $menu): bool
     {
-        return false;
+        return true;
     }
 }
