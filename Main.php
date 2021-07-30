@@ -76,7 +76,7 @@ $menu3 = new Menu("のり弁当", "和食", [$recipe4, $recipe5]);
 /******** 問題7 **********/
 $menuSet = new MenuSet([$menu1, $menu2, $menu3]); // $menu1, $menu2, $menu3はメニューオブジェクトとする。
 
-$menus1 = $menuSet->getMenusBySpecInterface(new MenuTypeSpec('和食')); // 和食のみのメニュー一覧を抽出
+$menus1 = $menuSet->getMenusBySpecInterface(new MenuTypeSpec('洋食')); // 和食のみのメニュー一覧を抽出
 
 // $menus2 = $menuSet->getMenusBySpecInterface(new CalorieOverSpec(100));  // 100カロリー以上のメニュー一覧を抽出
 var_dump($menus1);

@@ -119,13 +119,15 @@ class MenuSet extends Menu
         return $filtered;
     }
 
+    //menuspecを満たすmenu一覧を返すメソッド
     public function getMenusBySpecInterface(MenuSpec $menuspec)
     {
-        switch ($menuspec) {
-            case new MenuTypeSpec():
-                return new MenuTypeSpec();
-            case new CalorieOverSpec():
-                return new CalorieOverSpec();
+        $filtered = [];
+        foreach ($this->getMenus() as $menu) {
+            if ($menuspec->satisfiedBy($menu)) {
+                $filtered[] = $menu;
+            }
         }
+        return $filtered;
     }
 }

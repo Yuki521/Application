@@ -7,8 +7,15 @@ use Uyu\MenuSpec;
 
 class MenuTypeSpec implements MenuSpec
 {
+    private string $type;
+
+    public function __construct($type)
+    {
+        $this->type = $type;
+    }
+
     public function satisfiedBy(Menu $menu): bool
     {
-        return false;
+        return $menu->getType() == $this->type;
     }
 }
