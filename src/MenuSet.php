@@ -119,7 +119,12 @@ class MenuSet extends Menu
         return $filtered;
     }
 
-    //menuspecを満たすmenu一覧を返すメソッド
+    /**
+     * menuspecを満たすmenu一覧を返すメソッド
+     *
+     * @param MenuSpec $menuspec
+     * @return void
+     */
     public function getMenusBySpecInterface(MenuSpec $menuspec)
     {
         $filtered = [];
