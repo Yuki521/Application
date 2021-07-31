@@ -78,5 +78,11 @@ $menuSet = new MenuSet([$menu1, $menu2, $menu3]); // $menu1, $menu2, $menu3は�
 
 $menus1 = $menuSet->getMenusBySpecInterface(new MenuTypeSpec('和食')); // 和食のみのメニュー一覧を抽出
 $menus2 = $menuSet->getMenusBySpecInterface(new CalorieOverSpec(100));  // 100カロリー以上のメニュー一覧を抽出
-// var_dump($menus1);
+var_dump($menus1);
 var_dump($menus2);
+
+/******** 問題8 **********/
+// $menuSet = new MenuSet([$menu1, $menu2, $menu3]); // $menu1, $menu2, $menu3はメニューオブジェクトとする。
+// $andMenus = $menuSet->getMenusBySpec(new AndSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100)));  //和食かつ100カロリー以上のメニュー一覧を抽出
+// $orMenus = $menuSet->getMenusBySpec(new OrSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100)));  //和食もしくは100カロリー以上のメニュー一覧を抽出
+// $orMenus = $menuSet->getMenusBySpec(new NotSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100)));  //和食もしくは100カロリー以上のメニュー一覧を抽出
