@@ -1,0 +1,22 @@
+{
+  "name": "yuki/application",
+  "authors": [
+    {
+      "name": "Yuki"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Yuki\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Yuki\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
+}
