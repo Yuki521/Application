@@ -2,6 +2,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Yuki\Pair;
+use Yuki\ArrayUntil;
 
 //Q1
 //$pair1 = new Yuki\Pair(1, 2);
@@ -14,7 +15,18 @@ use Yuki\Pair;
 //echo $pair2->getSecond(),PHP_EOL;
 
 //Q2
-$pair = new Pair(1,2);
+//$pair = new Pair(1,2);
+//
+//var_dump( $pair->__toString());
+//var_dump( $pair);
 
-var_dump( $pair->__toString());
-var_dump( $pair);
+//Q3
+//$intArray = [1,2,3,4,5,6];
+//$evens = ArrayUntil::evensOfByForeach($intArray);
+//
+//echo implode(',', $evens), PHP_EOL;
+
+//Q4
+$zip1 = ArrayUntil::zip([1,2,3],[2,3,4]);
+
+var_dump($zip1);
