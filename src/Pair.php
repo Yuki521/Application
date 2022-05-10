@@ -21,7 +21,7 @@ class Pair
     /**
      * @return int
      */
-    public function getFirst(): int
+    public function first(): int
     {
         return $this->first;
     }
@@ -29,7 +29,7 @@ class Pair
     /**
      * @return int
      */
-    public function getSecond(): int
+    public function second(): int
     {
         return $this->second;
     }
@@ -39,6 +39,6 @@ class Pair
      */
     public function __toString(): string
     {
-        return '('.$this->first.','.$this->second.')';
+        return "({$this->first()},{$this->second()})";
     }
 }
