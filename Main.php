@@ -2,7 +2,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Yuki\Pair;
-use Yuki\ArrayUntil;
+use Yuki\ArrayUtil;
 
 //Q1
 //$pair1 = new Yuki\Pair(1, 2);
@@ -27,6 +27,6 @@ use Yuki\ArrayUntil;
 //echo implode(',', $evens), PHP_EOL;
 
 //Q4
-$zip1 = ArrayUntil::zip([1,2,3],[2,3,4]);
+$zip1 = ArrayUtil::zip([1,2,3],[2,3,4]);
 
 var_dump($zip1);

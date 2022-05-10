@@ -2,7 +2,7 @@
 
 namespace Yuki;
 
-class ArrayUntil
+class ArrayUtil
 {
     private array $intArray;
 
