@@ -24,10 +24,26 @@ echo $pair, PHP_EOL;
 
 echo '####### Q3 #######', PHP_EOL;
 $intArray = [1,2,3,4,5,6];
-$evens = ArrayUtil::evensOfByForeach($intArray);
+//$evensForeach = ArrayUtil::evensOfByForeach($intArray);
+//$evensOld = ArrayUtil::evensOfOld($intArray);
+$evens = ArrayUtil::evensOf($intArray);
 
+//echo implode(',', $evensForeach), PHP_EOL;
+//echo implode(',', $evensOld), PHP_EOL;
 echo implode(',', $evens), PHP_EOL;
 
 
 echo '####### Q4 #######', PHP_EOL;
-$zip1 = ArrayUtil::zip([1,2,3],[2,3,4]);
+$hogeArray = ArrayUtil::replicate(3,'hoge');
+echo implode(',', $hogeArray).PHP_EOL;
+
+$phpArray = ArrayUtil::replicate(2,'php');
+echo implode(',', $phpArray).PHP_EOL;
+
+
+echo '####### Q5 #######', PHP_EOL;
+$zip1 = ArrayUtil::zip([1, 2, 3], [2, 3, 4]);
+$zip2 = ArrayUtil::zip([1, 2, 3], [10, 9]);
+
+echo implode(',', $zip1).PHP_EOL;
+echo implode(',', $zip2).PHP_EOL;
