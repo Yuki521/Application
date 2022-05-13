@@ -61,3 +61,6 @@ echo '####### Q7 #######', PHP_EOL;
 $perfects = ArrayUtil::perfects(500);
 
 echo implode(',', $perfects).PHP_EOL;
+
+
+echo '####### Q8 #######', PHP_EOL;

@@ -39,35 +39,25 @@ class ArrayUtil
     }
 
     /**
-     * @param int $int
+     * @param int $arg
      * @return array
      */
-    public static function factors(int $int): array
+    public static function factors(int $arg): array
     {
-        $intArray = [];
-        for ($i = 1; $i < $int + 1; $i++) {
-            if ($int % $i === 0) {
-                $intArray[] = $i;
-            }
-        }
-        return $intArray;
+        return array_filter(range(1, $arg), fn($int) => $arg % $int ===0);
     }
 
     /**
-     * @param int $int
+     * @param int $arg
      * @return array
      */
-    public static function perfects(int $int): array
+    public static function perfects(int $arg): array
     {
         //1.約数の和を求める
         //2.約数の和から自分自身の数を引く
         //3.その数が等しければその数を返す
-        $intArray = [];
-        for ($i = 1; $i < $int + 1; $i++) {
-            if(array_sum(self::factors($i)) - $i === $i){
-                $intArray[] = $i;
-            }
-        }
-        return $intArray;
+        return array_filter(range(1,$arg),fn($int) =>  array_sum(self::factors($int)) - $int === $int);
     }
+
+
 }
