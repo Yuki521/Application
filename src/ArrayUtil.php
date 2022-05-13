@@ -44,7 +44,6 @@ class ArrayUtil
      */
     public static function factors(int $int): array
     {
-        //$intを1から$intまで割り続けて、割り切れたら約数として返す
         $intArray = [];
         for ($i = 1; $i < $int + 1; $i++) {
             if ($int % $i === 0) {

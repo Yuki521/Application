@@ -55,3 +55,9 @@ $factors2 = ArrayUtil::factors(7);
 
 echo implode(',', $factors1).PHP_EOL;
 echo implode(',', $factors2).PHP_EOL;
+
+
+echo '####### Q7 #######', PHP_EOL;
+$perfects = ArrayUtil::perfects(500);
+
+echo implode(',', $perfects).PHP_EOL;
