@@ -4,9 +4,9 @@ namespace Yuki;
 
 class Pair
 {
-    private int $first;
+    public int $first;
 
-    private int $second;
+    public int $second;
 
     /**
      * @param int $first

@@ -59,5 +59,38 @@ class ArrayUtil
         return array_filter(range(1,$arg),fn($int) =>  array_sum(self::factors($int)) - $int === $int);
     }
 
+    /**
+     * @param array $arg
+     * @return array
+     */
+    public static function pairs(array $arg): array
+    {
+        //1.数分繰り返す
+        //2.1つめ2つめをPairに入れてarrayで返す
+        $countArg = count($arg);
+        $intArray = [];
+        for($i = 0; $i < $countArg; $i++){
+            if($i +1 < $countArg){
+                $intArray[] = new Pair($arg[$i], $arg[$i + 1]);
+            }
+        }
+        return $intArray;
+    }
 
+    /**
+     * @param array $arg
+     * @return bool
+     */
+    public static function sorted(array $arg): bool
+    {
+        //1.pairsを使って配列を分解
+        //2.firstがsecondより大きければ return false
+        $pairs = self::pairs($arg);
+        foreach ($pairs as $pair) {
+            if($pair->first > $pair->second){
+                return false;
+            }
+        }
+        return true;
+    }
 }

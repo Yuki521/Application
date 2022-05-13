@@ -64,3 +64,15 @@ echo implode(',', $perfects).PHP_EOL;
 
 
 echo '####### Q8 #######', PHP_EOL;
+$pairs = ArrayUtil::pairs([1, 2, 3, 4]);
+
+echo implode(',', $pairs).PHP_EOL;
+
+
+echo '####### Q8 #######', PHP_EOL;
+var_dump(ArrayUtil::sorted([1,2,3,4]));
+var_dump(ArrayUtil::sorted([3,2,5,6]));
+
+
+echo '####### Q9 #######', PHP_EOL;
+var_dump(ArrayUtil::positions(10, [10, 15, 20, 10, 10, 33]));
