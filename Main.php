@@ -47,3 +47,11 @@ $zip2 = ArrayUtil::zip([1, 2, 3], [10, 9]);
 
 echo implode(',', $zip1).PHP_EOL;
 echo implode(',', $zip2).PHP_EOL;
+
+
+echo '####### Q6 #######', PHP_EOL;
+$factors1 = ArrayUtil::factors(15);
+$factors2 = ArrayUtil::factors(7);
+
+echo implode(',', $factors1).PHP_EOL;
+echo implode(',', $factors2).PHP_EOL;
