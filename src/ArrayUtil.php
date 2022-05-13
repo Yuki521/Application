@@ -52,4 +52,22 @@ class ArrayUtil
         }
         return $intArray;
     }
+
+    /**
+     * @param int $int
+     * @return array
+     */
+    public static function perfects(int $int): array
+    {
+        //1.約数の和を求める
+        //2.約数の和から自分自身の数を引く
+        //3.その数が等しければその数を返す
+        $intArray = [];
+        for ($i = 1; $i < $int + 1; $i++) {
+            if(array_sum(self::factors($i)) - $i === $i){
+                $intArray[] = $i;
+            }
+        }
+        return $intArray;
+    }
 }
