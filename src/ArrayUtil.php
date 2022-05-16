@@ -65,12 +65,10 @@ class ArrayUtil
      */
     public static function pairs(array $arg): array
     {
-        //1.配列の数を数える
-        //2.数値に+1足した数が配列を越えるまで、$iの数、$i+1の数をPairに入れてarrayで返す
-        $countArg = count($arg);
+        //数値に+1足した数が配列の数を越えるまで、配列の数分$iの数、$i+1の数をPairに入れてarrayで返す
         $intArray = [];
-        for ($i = 0; $i < $countArg; $i++) {
-            if ($i + 1 < $countArg) {
+        for ($i = 0; $i < count($arg); $i++) {
+            if ($i + 1 < count($arg)) {
                 $intArray[] = new Pair($arg[$i], $arg[$i + 1]);
             }
         }
@@ -90,11 +88,11 @@ class ArrayUtil
     }
 
     /**
-     * @param $int
-     * @param $intArray
+     * @param int $int
+     * @param array $intArray
      * @return array
      */
-    public static function positions($int, $intArray): array
+    public static function positions(int $int, array $intArray): array
     {
         //1.整数値を配列の数分と同じ数の配列にする
         //2.zipメソッドを使用してpairの形にする
