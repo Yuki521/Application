@@ -21,7 +21,7 @@ echo $pair, PHP_EOL;
 
 
 echo '####### Q3 #######', PHP_EOL;
-$evens = ArrayUtil::evensOf( [1, 2, 3, 4, 5, 6]);
+$evens = ArrayUtil::evensOf([1, 2, 3, 4, 5, 6]);
 echo implode(',', $evens), PHP_EOL;
 
 
