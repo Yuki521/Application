@@ -82,7 +82,7 @@ class ArrayUtil
     public static function sorted(array $arg): bool
     {
         //1.pairsを使って配列を分解
-        //2.firstがsecondより大きければ返す
+        //2.firstがsecondより大きければ配列を返す
         //3.emptyであればtrueを返す
         return empty(array_filter(self::pairs($arg), fn($pair) => $pair->first > $pair->second));
     }
@@ -95,8 +95,12 @@ class ArrayUtil
     public static function positions(int $int, array $intArray): array
     {
         //1.整数値を配列の数分と同じ数の配列にする
+        $replicate = self::replicate(count($intArray), $int);
         //2.zipメソッドを使用してpairの形にする
-        //3.sortedの要領で比較して、一致した配列のkeyを返す
-        return array_keys(array_filter(self::zip($intArray, self::replicate(count($intArray), $int)), fn($zip) => $zip->first === $zip->second));
+        $zip = self::zip($intArray, $replicate);
+        //3.sortedの要領で比較して、一致した配列を返す
+        $positions = array_filter($zip, fn($zip) => $zip->first === $zip->second);
+        //4.keyを返す
+        return array_keys($positions);
     }
 }
