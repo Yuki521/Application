@@ -65,7 +65,6 @@ class ArrayUtil
      */
     public static function pairs(array $arg): array
     {
-        //数値に+1足した数が配列の数を越えるまで、配列の数分$iの数、$i+1の数をPairに入れてarrayで返す
         $intArray = [];
         for ($i = 0; $i < count($arg); $i++) {
             if ($i + 1 < count($arg)) {
@@ -81,9 +80,6 @@ class ArrayUtil
      */
     public static function sorted(array $arg): bool
     {
-        //1.pairsを使って配列を分解
-        //2.firstがsecondより大きければ配列を返す
-        //3.emptyであればtrueを返す
         return empty(array_filter(self::pairs($arg), fn($pair) => $pair->first > $pair->second));
     }
 
@@ -94,13 +90,9 @@ class ArrayUtil
      */
     public static function positions(int $int, array $intArray): array
     {
-        //1.整数値を配列の数分と同じ数の配列にする
         $replicate = self::replicate(count($intArray), $int);
-        //2.zipメソッドを使用してpairの形にする
         $zip = self::zip($intArray, $replicate);
-        //3.sortedの要領で比較して、一致した配列を返す
         $positions = array_filter($zip, fn($zip) => $zip->first === $zip->second);
-        //4.keyを返す
         return array_keys($positions);
     }
 }
