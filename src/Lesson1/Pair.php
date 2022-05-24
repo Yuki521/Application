@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuki;
+namespace Yuki\Lesson1;
 
 class Pair
 {

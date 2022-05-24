@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuki\lesson2;
+namespace Yuki\Lesson1\Lesson1\lesson2;
 
 interface Calculation
 {
