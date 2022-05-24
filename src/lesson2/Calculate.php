@@ -37,8 +37,7 @@ class Calculate implements Calculation
             '-' => $x - $y,
             'm' => $x * $y,
             '/' => $x / $y,
-            '%' => $x % $y,
-            default => 0,
+            '%' => $x % $y
         };
     }
 

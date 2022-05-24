@@ -1,10 +1,10 @@
 <?php
 
-use Yuki\lesson2\Calculation;
+use Yuki\lesson2\Calculate;
 
 require __DIR__ . '/vendor/autoload.php';
 
-//####### Q1 #######//
+####### Q1 #######
 
 //echo match ($argv[1]) {
 //    '+' => $argv[2] + $argv[3] . PHP_EOL,
@@ -14,16 +14,35 @@ require __DIR__ . '/vendor/autoload.php';
 //    default => '正しい符号を入力してください。' . PHP_EOL,
 //};
 
-//####### Q2 #######//
+####### Q2 #######
 
 //$calculate = new Calculate($argv[1]);
 //$answer = $calculate->calc($argv[2],$argv[3]);
 //
 //echo $answer. PHP_EOL;
 
-//####### Q3 #######//
+####### Q3 #######
 
-$calculate = new Calculation();
-$answer = $calculate->calc($argv[2],$argv[3]);
+//$calculate = new Calculate($argv[1]);
+//$answer = $calculate->calc($argv[2],$argv[3]);
+//
+//echo $answer. PHP_EOL;
 
-echo $answer. PHP_EOL;
+####### Q4 #######
+
+echo 'Welcome to Calculation.' . PHP_EOL;
+
+while (true) {
+    $stdin = trim(fgets(STDIN));
+
+    if ($stdin == 'quit') {
+        echo 'Goody bye.' . PHP_EOL;
+        return false;
+    }
+
+    $formula = explode(' ', $stdin);
+    $calculate = new Calculate($formula[0]);
+    $answer = $calculate->calc($formula[1], $formula[2]);
+
+    echo $answer . PHP_EOL;
+}
