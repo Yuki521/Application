@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuki\Lesson1\Lesson1;
+namespace Yuki\lesson1;
 
 class ArrayUtil
 {

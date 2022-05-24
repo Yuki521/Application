@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuki\Lesson1\Lesson1\lesson2;
+namespace Yuki\lesson2;
 
 class Calculate implements Calculation
 {

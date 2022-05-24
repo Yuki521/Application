@@ -1,8 +1,9 @@
 <?php
 
-namespace Yuki\Lesson1\Lesson1\lesson2;
+namespace Yuki;
 
 use PHPUnit\Framework\TestCase;
+use Yuki\lesson2\Calculate;
 
 class CalculateTest extends TestCase
 {

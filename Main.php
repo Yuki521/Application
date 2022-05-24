@@ -1,12 +1,12 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use Yuki\Lesson1\Lesson1\Pair;
-use Yuki\Lesson1\Lesson1\ArrayUtil;
+use Yuki\lesson1\Lesson1\Pair;
+use Yuki\lesson1\Lesson1\ArrayUtil;
 
 echo '####### Q1 #######', PHP_EOL;
-$pair1 = new Yuki\Lesson1\Lesson1\Pair(1, 2);
-$pair2 = new Yuki\Lesson1\Lesson1\Pair(3, 4);
+$pair1 = new Yuki\lesson1\Lesson1\Pair(1, 2);
+$pair2 = new Yuki\lesson1\Lesson1\Pair(3, 4);
 echo $pair1->first(), PHP_EOL;
 echo $pair1->second(), PHP_EOL;
 echo $pair2->first(), PHP_EOL;
