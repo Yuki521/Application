@@ -7,16 +7,15 @@ use Yuki\lesson2\Calculate;
 
 class CalculateTest extends TestCase
 {
-
-
     /**
+     * @test
      * @dataProvider CalcProvider
      */
-    public function testCalc($stdin, $expected)
+    public function 指定された演算子と一致する演算結果を返す($formula, $expected)
     {
-        $formula = explode(' ', $stdin);
-        $calculate = new Calculate($formula[0]);
-        $actual = $calculate->calc($formula[1], $formula[2]);
+        $n = explode(' ', $formula);
+        $calculate = new Calculate($n[0]);
+        $actual = $calculate->calc($n[1], $n[2]);
 
         $this->assertEquals($expected, $actual);
     }

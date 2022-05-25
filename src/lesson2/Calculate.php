@@ -7,32 +7,34 @@ class Calculate implements Calculation
     /**
      * @var string
      */
-    private string $sign;
+    private string $operator;
 
     /**
-     * @param string $sign
+     * @param string $operator
      */
-    public function __construct(string $sign)
+    public function __construct(string $operator)
     {
-        $this->sign = $sign;
+        $this->operator = $operator;
     }
 
     /**
      * @return string
      */
-    public function sign(): string
+    public function operator(): string
     {
-        return $this->sign;
+        return $this->operator;
     }
 
     /**
+     * 指定された演算子と一致する演算結果を返します
+     *
      * @param int $x
      * @param int $y
      * @return int
      */
     public function calc(int $x, int $y): int
     {
-        return match ($this->sign()) {
+        return match ($this->operator()) {
             '+' => $x + $y,
             '-' => $x - $y,
             'm' => $x * $y,

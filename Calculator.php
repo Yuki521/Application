@@ -1,6 +1,6 @@
 <?php
 
-use Yuki\lesson1\Lesson1\lesson2\Calculate;
+use Yuki\lesson2\Calculate;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -33,16 +33,16 @@ require __DIR__ . '/vendor/autoload.php';
 echo 'Welcome to Calculation.' . PHP_EOL;
 
 while (true) {
-    $stdin = trim(fgets(STDIN));
+    $formula = trim(fgets(STDIN));
 
-    if ($stdin == 'quit') {
+    if ($formula == 'quit') {
         echo 'Goody bye.' . PHP_EOL;
         return false;
     }
 
-    $formula = explode(' ', $stdin);
-    $calculate = new Calculate($formula[0]);
-    $answer = $calculate->calc($formula[1], $formula[2]);
+    $n = explode(' ', $formula);
+    $calculate = new Calculate($n[0]);
+    $answer = $calculate->calc($n[1], $n[2]);
 
     echo $answer . PHP_EOL;
 }
