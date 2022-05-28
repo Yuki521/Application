@@ -1,6 +1,6 @@
 <?php
 
-use Yuki\lesson2\Calculate;
+use Yuki\lesson2\CalculateFactory;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -37,12 +37,15 @@ while (true) {
 
     if ($formula == 'quit') {
         echo 'Goody bye.' . PHP_EOL;
-        return false;
+        break;
     }
 
-    $n = explode(' ', $formula);
-    $calculate = new Calculate($n[0]);
-    $answer = $calculate->calc($n[1], $n[2]);
+    list($operator, $x, $y) = explode(' ', $formula);
+    $factory = new CalculateFactory();
+    $calculate = $factory->create($operator);
+    $answer = $calculate->calc($x, $y);
 
     echo $answer . PHP_EOL;
+
+
 }
