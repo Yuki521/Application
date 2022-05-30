@@ -62,7 +62,10 @@ class Menu
      */
     public function getCal(): float
     {
-        return array_sum(array_map(fn($recipe) => $recipe->getCal(), $this->getRecipes()));
+        return array_sum(array_map(
+            fn($recipe) => $recipe->getCal(),
+            $this->getRecipes()
+        ));
     }
 
 

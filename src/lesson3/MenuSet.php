@@ -4,6 +4,9 @@ namespace Yuki\lesson3;
 
 class MenuSet
 {
+    /**
+     * @var array
+     */
     private array $menus;
 
     /**
@@ -35,6 +38,12 @@ class MenuSet
         );
     }
 
+    /**
+     * 指定したカロリー以上のメニュー配列のみを返す
+     *
+     * @param int $cal
+     * @return array
+     */
     public function getMenusByCalorie(int $cal): array
     {
         return array_filter($this->getMenus(),
