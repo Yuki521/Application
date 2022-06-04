@@ -49,7 +49,7 @@ class MenuSet
     public function getMenusByCalorie(int $cal): array
     {
         return array_filter($this->getMenus(),
-            fn(Menu $menu) => $menu->getCal() >= $cal
+            fn(Menu $menu) => $menu->getCalorie() >= $cal
         );
     }
 
@@ -68,5 +68,16 @@ class MenuSet
             }
         }
         return $filtered;
+    }
+
+    /**
+     * @param MenuSpec $menuSpec
+     * @return Menu[]
+     */
+    public function getMenusBySpecInterface(MenuSpec $menuSpec): array
+    {
+        return array_filter($this->getMenus(),
+            fn(Menu $menu) => $menuSpec->satisfiedBy($menu)
+        );
     }
 }

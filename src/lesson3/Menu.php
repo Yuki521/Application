@@ -60,7 +60,7 @@ class Menu
      *
      * @return float
      */
-    public function getCal(): float
+    public function getCalorie(): float
     {
         return array_sum(array_map(
             fn(Recipe $recipe) => $recipe->getCal(),

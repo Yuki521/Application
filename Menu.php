@@ -3,6 +3,8 @@
 use Yuki\lesson3\MenuSet;
 use Yuki\lesson3\Menu;
 use Yuki\lesson3\Recipe;
+use Yuki\lesson3\SpecLists\CalorieOverSpec;
+use Yuki\lesson3\SpecLists\MenuTypeSpec;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -65,7 +67,20 @@ $r5 = new Recipe("海苔", 20);
 //
 //print_r($menus);
 
-echo '####### Q6 #######', PHP_EOL;
+//echo '####### Q6 #######', PHP_EOL;
+//
+//$menu1 = new Menu("ハンバーグ弁当", "洋食", [$r1, $r2]);
+//$menu2 = new Menu("鮭弁当", "和食", [$r3, $r4]);
+//$menu3 = new Menu("のり弁当", "和食", [$r4, $r5]);
+//
+//$menuSet = new MenuSet([$menu1, $menu2, $menu3]);
+//
+//$spec = fn(Menu $menu) => $menu->getType() == '和食';
+//
+//$menus = $menuSet->getMenusBySpec($spec);
+//print_r($menus);
+
+echo '####### Q7 #######', PHP_EOL;
 
 $menu1 = new Menu("ハンバーグ弁当", "洋食", [$r1, $r2]);
 $menu2 = new Menu("鮭弁当", "和食", [$r3, $r4]);
@@ -73,8 +88,8 @@ $menu3 = new Menu("のり弁当", "和食", [$r4, $r5]);
 
 $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
 
-$spec = fn(Menu $menu) => $menu->getType() == '和食';
+$menus1 = $menuSet->getMenusBySpecInterface(new MenuTypeSpec("和食"));
+$menus2 = $menuSet->getMenusBySpecInterface(new CalorieOverSpec(100));
 
-$menus = $menuSet->getMenusBySpec($spec);
-print_r($menus);
-
+print_r($menus1);
+print_r($menus2);
