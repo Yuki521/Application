@@ -2,6 +2,8 @@
 
 namespace Yuki\lesson3;
 
+use Closure;
+
 class MenuSet
 {
     /**
@@ -34,7 +36,7 @@ class MenuSet
     public function getMenusByType(string $type): array
     {
         return array_filter($this->getMenus(),
-            fn($menu) => $menu->getType() == $type
+            fn(Menu $menu) => $menu->getType() == $type
         );
     }
 
@@ -47,9 +49,24 @@ class MenuSet
     public function getMenusByCalorie(int $cal): array
     {
         return array_filter($this->getMenus(),
-            fn($menu) => $menu->getCal() >= $cal
+            fn(Menu $menu) => $menu->getCal() >= $cal
         );
     }
 
-
+    /**
+     * 任意の条件を満たすメニュー配列を返す
+     *
+     * @param Closure $spec
+     * @return array
+     */
+    public function getMenusBySpec(Closure $spec): array
+    {
+        $filtered=[];
+        foreach ($this->getMenus() as $menu) {
+            if($spec($menu)){
+                $filtered[] = $menu;
+            }
+        }
+        return $filtered;
+    }
 }

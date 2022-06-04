@@ -54,14 +54,27 @@ $r5 = new Recipe("海苔", 20);
 //
 //print_r($menus);
 
-echo '####### Q5 #######', PHP_EOL;
+//echo '####### Q5 #######', PHP_EOL;
+//
+//$menu1 = new Menu("ハンバーグ弁当", "洋食", [$r1, $r2]);
+//$menu2 = new Menu("鮭弁当", "和食", [$r3, $r4]);
+//$menu3 = new Menu("のり弁当", "和食", [$r4, $r5]);
+//
+//$menuSet = new MenuSet([$menu1, $menu2, $menu3]);
+//$menus = $menuSet->getMenusByCalorie("100");
+//
+//print_r($menus);
+
+echo '####### Q6 #######', PHP_EOL;
 
 $menu1 = new Menu("ハンバーグ弁当", "洋食", [$r1, $r2]);
 $menu2 = new Menu("鮭弁当", "和食", [$r3, $r4]);
 $menu3 = new Menu("のり弁当", "和食", [$r4, $r5]);
 
 $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
-$menus = $menuSet->getMenusByCalorie("100");
 
+$spec = fn(Menu $menu) => $menu->getType() == '和食';
+
+$menus = $menuSet->getMenusBySpec($spec);
 print_r($menus);
 

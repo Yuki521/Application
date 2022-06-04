@@ -2,6 +2,7 @@
 
 namespace Yuki\lesson2;
 
+use JetBrains\PhpStorm\Pure;
 use Yuki\lesson2\Algorithm\Modulo;
 use Yuki\lesson2\Algorithm\Multiply;
 use Yuki\lesson2\Algorithm\Minus;
@@ -14,7 +15,7 @@ class CalculateFactory
      * @param string $operator
      * @return Calculation
      */
-    public function create(string $operator): Calculation
+    #[Pure] public function create(string $operator): Calculation
     {
         return match ($operator) {
             '+' => new Sum(),
