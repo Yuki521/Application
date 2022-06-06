@@ -57,7 +57,7 @@ class MenuSet
      * 任意の条件を満たすメニュー配列を返す
      *
      * @param Closure $spec
-     * @return array
+     * @return Menu[]
      */
     public function getMenusBySpec(Closure $spec): array
     {

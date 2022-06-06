@@ -6,7 +6,7 @@ class Recipe
 {
     private string $name;
 
-    private float $cal;
+    private float $calorie;
 
     /**
      * @param string $name
@@ -15,7 +15,7 @@ class Recipe
     public function __construct(string $name, float $cal)
     {
         $this->name = $name;
-        $this->cal = $cal;
+        $this->calorie = $cal;
     }
 
     /**
@@ -29,9 +29,9 @@ class Recipe
     /**
      * @return float
      */
-    public function getCal(): float
+    public function getCalorie(): float
     {
-        return $this->cal;
+        return $this->calorie;
     }
 
 }
