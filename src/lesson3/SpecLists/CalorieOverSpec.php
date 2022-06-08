@@ -13,19 +13,11 @@ class CalorieOverSpec implements MenuSpec
     private float $calorie;
 
     /**
-     * @param $calorie
+     * @param float $calorie
      */
-    public function __construct($calorie)
+    public function __construct(float $calorie)
     {
         $this->calorie = $calorie;
-    }
-
-    /**
-     * @return float
-     */
-    public function getCalorie(): float
-    {
-        return $this->calorie;
     }
 
     /**
@@ -34,6 +26,6 @@ class CalorieOverSpec implements MenuSpec
      */
     public function satisfiedBy(Menu $menu): bool
     {
-        return $menu->getCalorie() >= $this->getCalorie();
+        return $menu->getCalorie() >= $this->calorie;
     }
 }

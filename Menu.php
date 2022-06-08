@@ -97,8 +97,8 @@ $r5 = new Recipe("海苔", 20);
 //print_r($menus1);
 //print_r($menus2);
 
-echo '####### Q8 #######', PHP_EOL;
-
+//echo '####### Q8 #######', PHP_EOL;
+//
 $menu1 = new Menu("ハンバーグ弁当", "洋食", [$r1, $r2]);
 $menu2 = new Menu("鮭弁当", "和食", [$r3, $r4]);
 $menu3 = new Menu("のり弁当", "和食", [$r4, $r5]);
@@ -107,11 +107,11 @@ $menuSet = new MenuSet([$menu1, $menu2, $menu3]);
 
 $andMenus = $menuSet->getMenusBySpecInterface(new AndSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100))); //鮭弁当
 $orMenus = $menuSet->getMenusBySpecInterface(new OrSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100))); //全て
-$notMenus = $menuSet->getMenusBySpecInterface(new NotSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(400))); //ハンバーグ弁当
+$notMenus = $menuSet->getMenusBySpecInterface(new NotSpec(new MenuTypeSpec("和食"))); //ハンバーグ弁当
 
 print_r($andMenus);
-//print_r($orMenus);
-//print_r($notMenus);
+print_r($orMenus);
+print_r($notMenus);
 
 //SOLID原則
 

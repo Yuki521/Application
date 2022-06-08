@@ -7,12 +7,12 @@ use Closure;
 class MenuSet
 {
     /**
-     * @var array
+     * @var Menu[]
      */
     private array $menus;
 
     /**
-     * @param array $menus
+     * @param Menu[] $menus
      */
     public function __construct(array $menus)
     {
@@ -20,7 +20,7 @@ class MenuSet
     }
 
     /**
-     * @return array
+     * @return Menu[]
      */
     public function getMenus(): array
     {
@@ -35,9 +35,11 @@ class MenuSet
      */
     public function getMenusByType(string $type): array
     {
-        return array_filter($this->getMenus(),
-            fn(Menu $menu) => $menu->getType() == $type
-        );
+//        return array_filter($this->getMenus(),
+//            fn(Menu $menu) => $menu->getType() == $type
+//        );
+
+        return $this->getMenusBySpec(fn(Menu $menu) => $menu->getType() == $type);
     }
 
     /**
@@ -48,9 +50,11 @@ class MenuSet
      */
     public function getMenusByCalorie(int $cal): array
     {
-        return array_filter($this->getMenus(),
-            fn(Menu $menu) => $menu->getCalorie() >= $cal
-        );
+//        return array_filter($this->getMenus(),
+//            fn(Menu $menu) => $menu->getCalorie() >= $cal
+//        );
+
+        return $this->getMenusBySpec(fn(Menu $menu) => $menu->getCalorie() >= $cal);
     }
 
     /**
@@ -61,13 +65,17 @@ class MenuSet
      */
     public function getMenusBySpec(Closure $spec): array
     {
-        $filtered=[];
-        foreach ($this->getMenus() as $menu) {
-            if($spec($menu)){
-                $filtered[] = $menu;
-            }
-        }
-        return $filtered;
+//        $filtered = [];
+//        foreach ($this->menus as $menu) {
+//            if ($spec($menu)) {
+//                $filtered[] = $menu;
+//            }
+//        }
+//        return $filtered;
+
+        return array_filter($this->menus,
+            fn(Menu $menu) => $spec($menu)
+        );
     }
 
     /**
@@ -76,7 +84,7 @@ class MenuSet
      */
     public function getMenusBySpecInterface(MenuSpec $menuSpec): array
     {
-        return array_filter($this->getMenus(),
+        return array_filter($this->menus,
             fn(Menu $menu) => $menuSpec->satisfiedBy($menu)
         );
     }

@@ -13,19 +13,11 @@ class MenuTypeSpec implements MenuSpec
     private string $type;
 
     /**
-     * @param $type
+     * @param string $type
      */
-    public function __construct($type)
+    public function __construct(string $type)
     {
         $this->type = $type;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType(): string
-    {
-        return $this->type;
     }
 
     /**
@@ -34,6 +26,6 @@ class MenuTypeSpec implements MenuSpec
      */
     public function satisfiedBy(Menu $menu): bool
     {
-        return $menu->getType() === $this->getType();
+        return $menu->getType() === $this->type;
     }
 }

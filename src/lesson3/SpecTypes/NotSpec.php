@@ -10,37 +10,15 @@ class NotSpec implements MenuSpec
     /**
      * @var MenuSpec
      */
-    private MenuSpec $specList1;
+    private MenuSpec $menuSpec;
+
 
     /**
-     * @var MenuSpec
+     * @param MenuSpec $menuSpec
      */
-    private MenuSpec $specList2;
-
-    /**
-     * @param MenuSpec $specList1
-     * @param MenuSpec $specList2
-     */
-    public function __construct(MenuSpec $specList1, MenuSpec $specList2)
+    public function __construct(MenuSpec $menuSpec)
     {
-        $this->specList1 = $specList1;
-        $this->specList2 = $specList2;
-    }
-
-    /**
-     * @return MenuSpec
-     */
-    public function getSpecList1(): MenuSpec
-    {
-        return $this->specList1;
-    }
-
-    /**
-     * @return MenuSpec
-     */
-    public function getSpecList2(): MenuSpec
-    {
-        return $this->specList2;
+        $this->menuSpec = $menuSpec;
     }
 
     /**
@@ -49,6 +27,6 @@ class NotSpec implements MenuSpec
      */
     public function satisfiedBy(Menu $menu): bool
     {
-        return !$this->getSpecList1()->satisfiedBy($menu) && !$this->getSpecList2()->satisfiedBy($menu);
+        return !$this->menuSpec->satisfiedBy($menu);
     }
 }

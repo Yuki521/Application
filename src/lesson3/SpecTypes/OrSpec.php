@@ -10,37 +10,21 @@ class OrSpec implements MenuSpec
     /**
      * @var MenuSpec
      */
-    private MenuSpec $specList1;
+    private MenuSpec $menuSpec1;
 
     /**
      * @var MenuSpec
      */
-    private MenuSpec $specList2;
+    private MenuSpec $menuSpec2;
 
     /**
-     * @param MenuSpec $specList1
-     * @param MenuSpec $specList2
+     * @param MenuSpec $menuSpec1
+     * @param MenuSpec $menuSpec2
      */
-    public function __construct(MenuSpec $specList1, MenuSpec $specList2)
+    public function __construct(MenuSpec $menuSpec1, MenuSpec $menuSpec2)
     {
-        $this->specList1 = $specList1;
-        $this->specList2 = $specList2;
-    }
-
-    /**
-     * @return MenuSpec
-     */
-    public function getSpecList1(): MenuSpec
-    {
-        return $this->specList1;
-    }
-
-    /**
-     * @return MenuSpec
-     */
-    public function getSpecList2(): MenuSpec
-    {
-        return $this->specList2;
+        $this->menuSpec1 = $menuSpec1;
+        $this->menuSpec2 = $menuSpec2;
     }
 
     /**
@@ -49,6 +33,6 @@ class OrSpec implements MenuSpec
      */
     public function satisfiedBy(Menu $menu): bool
     {
-        return $this->getSpecList1()->satisfiedBy($menu) || $this->getSpecList2()->satisfiedBy($menu);
+        return $this->menuSpec1->satisfiedBy($menu) || $this->menuSpec2->satisfiedBy($menu);
     }
 }
