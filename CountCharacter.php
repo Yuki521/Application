@@ -2,8 +2,6 @@
 
 namespace Yuki;
 
-use PHPUnit\Exception;
-
 class CountCharacter
 {
     /**
