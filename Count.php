@@ -17,14 +17,14 @@ try{
     $countCharacter = new CountCharacter($path);
     $countedCharacter = $countCharacter->countCharacter();
 
-    $character = new Answer($countedCharacter);
+    $answer = new Answer($countedCharacter);
 
-    foreach ( $character->getCountedCharacter() as $letter => $number) {
-        echo $letter.' '.$number.PHP_EOL;
+    foreach ($answer->getCountedCharacter() as $character => $number) {
+        echo $character.' '.$number.PHP_EOL;
     }
 
-    echo implode(',',$character->getCharacters()).PHP_EOL;
-    echo implode(',',$character->getNumbers()).PHP_EOL;
+    echo implode(',',$answer->getCharacters()).PHP_EOL;
+    echo implode(',',$answer->getNumbers()).PHP_EOL;
 }catch (\Exception $e){
     echo $e->getMessage().PHP_EOL;
 }
