@@ -17,7 +17,12 @@ class CountCharacter
         $this->path = $path;
     }
 
-    public function countCharacter()
+    /**
+     * ファイルの中にある文字を種類ごとにカウントして多い順に返します。
+     *
+     * @return array
+     */
+    public function countCharacter(): array
     {
         $contents = file_get_contents($this->path);
         $splitCharacters = mb_str_split(str_replace(PHP_EOL, '', $contents));
