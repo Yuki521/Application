@@ -5,9 +5,14 @@ use Yuki\lesson4\CountCharacter;
 
 require __DIR__ . '/vendor/autoload.php';
 
-//php CountCharacter.php src/lesson4/first.txt
+//php Count.php src/lesson4/first.txt
 
 $path = $argv[1];
+
+function printImplode($arrayMessage)
+{
+    echo implode(',',$arrayMessage).PHP_EOL;
+}
 
 try{
     if(!file_exists($path)){
@@ -23,8 +28,10 @@ try{
         echo $character.' '.$number.PHP_EOL;
     }
 
-    echo implode(',',$answer->getCharacters()).PHP_EOL;
-    echo implode(',',$answer->getNumbers()).PHP_EOL;
+
+    printImplode($answer->getCharacters());
+    printImplode($answer->getNumbers());
+
 }catch (\Exception $e){
     echo $e->getMessage().PHP_EOL;
 }
