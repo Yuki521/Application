@@ -1,6 +1,6 @@
 <?php
 
-use Yuki\lesson4\Answer;
+use Yuki\lesson4\Characters;
 use Yuki\lesson4\CountCharacter;
 
 require __DIR__ . '/vendor/autoload.php';
@@ -20,17 +20,16 @@ try{
     }
 
     $countCharacter = new CountCharacter($path);
-    $countedCharacter = $countCharacter->countCharacter();
+    $characters = $countCharacter->countCharacter();
 
-    $answer = new Answer($countedCharacter);
+    $characters->sort();
 
-    foreach ($answer->getCountedCharacter() as $character => $number) {
+    foreach ($characters->getCountedCharacter() as $character => $number) {
         echo $character.' '.$number.PHP_EOL;
     }
 
-
-    printImplode($answer->getCharacters());
-    printImplode($answer->getNumbers());
+//    printImplode($characters->getCharacters());
+//    printImplode($characters->getNumbers());
 
 }catch (\Exception $e){
     echo $e->getMessage().PHP_EOL;

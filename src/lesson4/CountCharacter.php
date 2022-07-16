@@ -20,16 +20,20 @@ class CountCharacter
     /**
      * ファイルの中にある文字を種類ごとにカウントして多い順に返します。
      *
-     * @return array
+     * @return Characters
      */
-    public function countCharacter(): array
+    public function countCharacter(): Characters
     {
-        $contents = file_get_contents($this->path);
-        $splitCharacters = mb_str_split(str_replace(PHP_EOL, '', $contents));
-        $countEachCharacter = array_count_values($splitCharacters);
-        arsort($countEachCharacter);
+        $fp = fopen($this->path, "r");
 
-        return $countEachCharacter;
+        $answer = new Characters();
+
+        while ($line = fgets($fp)) {
+            $line = rtrim($line);
+            $answer->addLine($line);
+        }
+
+        return $answer;
     }
 
 }
