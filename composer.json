@@ -5,7 +5,9 @@
       "name": "Yuki"
     }
   ],
-  "require": {},
+  "require": {
+    "ext-mbstring": "*"
+  },
   "autoload": {
     "psr-4": {
       "Yuki\\": "src/"
