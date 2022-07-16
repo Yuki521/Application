@@ -24,14 +24,16 @@ class CountCharacter
      */
     public function countCharacter(): Characters
     {
-        $fp = fopen($this->path, "r");
+        $handle = fopen($this->path, "r");
 
         $answer = new Characters();
 
-        while ($line = fgets($fp)) {
+        while ($line = fgets($handle)) {
             $line = rtrim($line);
             $answer->addLine($line);
         }
+
+        fclose($handle);
 
         return $answer;
     }
