@@ -10,7 +10,7 @@ class ArrayUtil
      */
     public static function evensOf(array $intList): array
     {
-        return array_filter($intList, fn($int) => $int % 2 === 0);
+        return array_values(array_filter($intList, fn($int) => $int % 2 === 0));
     }
 
     /**
@@ -44,6 +44,9 @@ class ArrayUtil
      */
     public static function factors(int $arg): array
     {
+        if ($arg === 0) {
+            return [];
+        }
         return array_filter(range(1, $arg), fn($int) => $arg % $int === 0);
     }
 
@@ -56,6 +59,9 @@ class ArrayUtil
         //1.約数の和を求める
         //2.約数の和から自分自身の数を引く
         //3.その数が等しければその数を返す
+        if ($arg === 0) {
+            return [];
+        }
         return array_filter(range(1, $arg), fn($int) => array_sum(self::factors($int)) - $int === $int);
     }
 
