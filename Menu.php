@@ -12,22 +12,22 @@ use Yuki\lesson3\SpecTypes\OrSpec;
 require __DIR__ . '/vendor/autoload.php';
 
 //recipes
-$r1 = new Recipe("ハンバーグ", 200.5);
-$r2 = new Recipe("目玉焼き", 120);
-$r3 = new Recipe("サーモン", 120);
-$r4 = new Recipe("ご飯", 60);
-$r5 = new Recipe("海苔", 20);
+//$r1 = new Recipe("ハンバーグ", 200.5);
+//$r2 = new Recipe("目玉焼き", 120);
+//$r3 = new Recipe("サーモン", 120);
+//$r4 = new Recipe("ご飯", 60);
+//$r5 = new Recipe("海苔", 20);
 
-//echo '####### Q1 #######', PHP_EOL;
+echo '####### Q1 #######', PHP_EOL;
 
-//$recipe1 = new Recipe("ハンバーグ", 200.5);
-//$recipe2 = new Recipe("サーモン", 120);
-//
-//echo $recipe1->getName(), PHP_EOL; //ハンバーグ
-//echo $recipe1->getCal(), PHP_EOL; //200.5
-//
-//echo $recipe2->getName(), PHP_EOL; //サーモン
-//echo $recipe2->getCal(), PHP_EOL; //120
+$recipe1 = new Recipe("ハンバーグ", 200.5);
+$recipe2 = new Recipe("サーモン", 120);
+
+echo $recipe1->getName(), PHP_EOL; //ハンバーグ
+echo $recipe1->getCalorie(), PHP_EOL; //200.5
+
+echo $recipe2->getName(), PHP_EOL; //サーモン
+echo $recipe2->getCalorie(), PHP_EOL; //120
 
 //echo '####### Q2 #######', PHP_EOL;
 //
@@ -99,19 +99,19 @@ $r5 = new Recipe("海苔", 20);
 
 //echo '####### Q8 #######', PHP_EOL;
 //
-$menu1 = new Menu("ハンバーグ弁当", "洋食", [$r1, $r2]);
-$menu2 = new Menu("鮭弁当", "和食", [$r3, $r4]);
-$menu3 = new Menu("のり弁当", "和食", [$r4, $r5]);
-
-$menuSet = new MenuSet([$menu1, $menu2, $menu3]);
-
-$andMenus = $menuSet->getMenusBySpecInterface(new AndSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100))); //鮭弁当
-$orMenus = $menuSet->getMenusBySpecInterface(new OrSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100))); //全て
-$notMenus = $menuSet->getMenusBySpecInterface(new NotSpec(new MenuTypeSpec("和食"))); //ハンバーグ弁当
-
-print_r($andMenus);
-print_r($orMenus);
-print_r($notMenus);
+//$menu1 = new Menu("ハンバーグ弁当", "洋食", [$r1, $r2]);
+//$menu2 = new Menu("鮭弁当", "和食", [$r3, $r4]);
+//$menu3 = new Menu("のり弁当", "和食", [$r4, $r5]);
+//
+//$menuSet = new MenuSet([$menu1, $menu2, $menu3]);
+//
+//$andMenus = $menuSet->getMenusBySpecInterface(new AndSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100))); //鮭弁当
+//$orMenus = $menuSet->getMenusBySpecInterface(new OrSpec(new MenuTypeSpec("和食"), new CalorieOverSpec(100))); //全て
+//$notMenus = $menuSet->getMenusBySpecInterface(new NotSpec(new MenuTypeSpec("和食"))); //ハンバーグ弁当
+//
+//print_r($andMenus);
+//print_r($orMenus);
+//print_r($notMenus);
 
 //SOLID原則
 

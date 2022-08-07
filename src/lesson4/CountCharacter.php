@@ -26,16 +26,17 @@ class CountCharacter
     {
         $handle = fopen($this->path, "r");
 
-        $answer = new Characters();
+        try {
+            $answer = new Characters();
 
-        while ($line = fgets($handle)) {
-            $line = rtrim($line);
-            $answer->addLine($line);
+            while ($line = fgetsx($handle)) {
+                $line = trim($line);
+                $answer->addLine($line);
+            }
+        } finally {
+            fclose($handle);
         }
-
-        fclose($handle);
 
         return $answer;
     }
-
 }
