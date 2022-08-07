@@ -8,6 +8,9 @@ class Devide implements Calculation
 {
     public function calc(int $x, int $y) :int
     {
+        if ($x === 0 | $y === 0) {
+            return 0;
+        }
         return $x / $y;
     }
 }
