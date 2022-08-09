@@ -29,7 +29,7 @@ class CountCharacter
         try {
             $answer = new Characters();
 
-            while ($line = fgetsx($handle)) {
+            while ($line = fopen($handle)) {
                 $line = trim($line);
                 $answer->addLine($line);
             }
