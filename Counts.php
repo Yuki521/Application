@@ -14,7 +14,11 @@ try{
 
     $countCharacters = new CountCharacters($path,$target);
 
-    var_dump($countCharacters->getFileList($path));
+    $fileLists = $countCharacters->getFileLists($path);
+
+    $countCharacters->getLineNumbers($fileLists);
+
+
 }catch (\Exception $e){
     echo $e->getMessage().PHP_EOL;
 }
