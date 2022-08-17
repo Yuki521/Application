@@ -22,24 +22,27 @@ class CountCharacters
     /**
      * 指定したパスの中のファイルパスを再帰的に取得します
      *
-     * @param $path
+     * @param $dir
      * @return array
      */
-    public function getFileLists($path): array
+    public function getFileLists($dir): array
     {
-        //他のやり方を検討する(scandir)
-        $files = glob(rtrim($path, '/') . '/*');
+        $files = scandir($dir);
+        $files = array_filter($files, fn($file) => !in_array($file, ['.', '..']));
+
         $fileLists = [];
         foreach ($files as $file) {
-            if (is_file($file)) {
-                $fileLists[] = $file;
+            $path = rtrim($dir, '/') . '/' . $file;
+            if (is_file($path)) {
+                $fileLists[] = $path;
             }
-            if (is_dir($file)) {
-                $fileLists = array_merge($fileLists, $this->getFileLists($file));
+            if (is_dir($path)) {
+                $fileLists = array_merge($fileLists, $this->getFileLists($path));
             }
         }
 
         return $fileLists;
+
     }
 
     /**
@@ -52,9 +55,9 @@ class CountCharacters
         foreach ($fileLists as $path) {
             $lines = $this->getLines($path);
             $nums = $this->search($lines);
-            if(!empty($nums)){
-                echo $path.' ';
-                echo implode(' ', $nums).PHP_EOL;
+            if (!empty($nums)) {
+                echo $path . ' ';
+                echo implode(' ', $nums) . PHP_EOL;
             }
         }
     }
@@ -89,7 +92,7 @@ class CountCharacters
     {
         $lineNumbers = [];
         foreach ($lines as $key => $line) {
-            if (preg_match('/'.$this->target.'/', $line)) {
+            if (preg_match('/' . $this->target . '/', $line)) {
                 $lineNumbers[] = $key + 1;
             }
         }
