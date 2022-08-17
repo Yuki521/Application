@@ -27,6 +27,7 @@ class CountCharacters
      */
     public function getFileLists($path): array
     {
+        //他のやり方を検討する(scandir)
         $files = glob(rtrim($path, '/') . '/*');
         $fileLists = [];
         foreach ($files as $file) {
