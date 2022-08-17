@@ -2,21 +2,39 @@
 
 namespace Yuki\lesson5;
 
-use Yuki\lesson4\Characters;
-
 class CountCharacters
 {
-    private string $path;
+    /**
+     * @var string
+     */
     private string $target;
 
     /**
-     * @param string $path
      * @param string $target
      */
-    public function __construct(string $path, string $target)
+    public function __construct(string $target)
     {
-        $this->path = $path;
         $this->target = $target;
+    }
+
+    /**
+     *
+     *
+     * @param $dir
+     * @return Answers
+     */
+    public function searchLines($dir): Answers
+    {
+        $fileLists = $this->getFileLists($dir);
+        $answer = new Answers();
+        foreach ($fileLists as $fileKey => $path) {
+            $nums = $this->search($this->getLines($path));
+            if (!empty($nums)) {
+                $answer->pair($fileKey,$path,$nums);
+            }
+        }
+
+        return $answer;
     }
 
     /**
@@ -42,28 +60,10 @@ class CountCharacters
         }
 
         return $fileLists;
-
     }
 
     /**
-     *
-     *
-     * @param array $fileLists
-     */
-    public function getLineNumbers(array $fileLists)
-    {
-        foreach ($fileLists as $path) {
-            $lines = $this->getLines($path);
-            $nums = $this->search($lines);
-            if (!empty($nums)) {
-                echo $path . ' ';
-                echo implode(' ', $nums) . PHP_EOL;
-            }
-        }
-    }
-
-    /**
-     *
+     * 与えられたパスの内容を配列で返します
      *
      * @param $path
      * @return array
@@ -73,18 +73,20 @@ class CountCharacters
         $handle = fopen($path, "r");
 
         try {
-            $files = [];
+            $lines = [];
             while ($line = fgets($handle)) {
-                $files[] = trim($line);
+                $lines[] = trim($line);
             }
         } finally {
             fclose($handle);
         }
-        return $files;
+        return $lines;
     }
 
 
     /**
+     * 与えられた複数行に指定の文字列が一致した場合その行数を配列で返します
+     *
      * @param $lines
      * @return array
      */
