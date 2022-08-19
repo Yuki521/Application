@@ -4,31 +4,36 @@ namespace Yuki\lesson5;
 
 class Answers
 {
-    public array $answers;
+
+    /**
+     * @var array
+     */
+    private array $pathToLineNumbers;
 
     public function __construct()
     {
-        $this->answers = [];
+        $this->pathToLineNumbers = [];
     }
 
     /**
      * @return array
      */
-    public function getAnswers(): array
+    public function getPathToLineNumbers(): array
     {
-        return $this->answers;
+        return $this->pathToLineNumbers;
     }
 
     /**
-     * @param $key
      * @param $path
      * @param $nums
      * @return void
      */
-    public function pair($key, $path, $nums): void
+    public function add($path, $nums): void
     {
-        $tmp = implode(',', $nums);
+        $this->pathToLineNumbers[$path] = $nums;
+        //keyがファイルパス
+        //valueが行番号の列
+        //のような辞書（map）
 
-        $this->answers[$key] = "{$path} {$tmp}";
     }
 }

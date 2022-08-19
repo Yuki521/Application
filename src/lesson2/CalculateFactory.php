@@ -7,7 +7,7 @@ use Yuki\lesson2\Algorithm\Modulo;
 use Yuki\lesson2\Algorithm\Multiply;
 use Yuki\lesson2\Algorithm\Minus;
 use Yuki\lesson2\Algorithm\Sum;
-use Yuki\lesson2\Algorithm\Devide;
+use Yuki\lesson2\Algorithm\Divide;
 
 class CalculateFactory
 {
@@ -21,7 +21,7 @@ class CalculateFactory
             '+' => new Sum(),
             '-' => new Minus(),
             'm' => new Multiply(),
-            '/' => new Devide(),
+            '/' => new Divide(),
             '%' => new Modulo(),
         };
     }

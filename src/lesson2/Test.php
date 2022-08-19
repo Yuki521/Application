@@ -3,7 +3,7 @@
 namespace Yuki\lesson2;
 
 use PHPUnit\Framework\TestCase;
-use Yuki\lesson2\Algorithm\Devide;
+use Yuki\lesson2\Algorithm\Divide;
 
 class Test extends TestCase
 {

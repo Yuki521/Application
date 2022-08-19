@@ -14,10 +14,11 @@ try{
 
     $countCharacters = new CountCharacters($target);
     $answers = $countCharacters->searchLines($path);
-    foreach ($answers->getAnswers() as $answer) {
-        echo $answer.PHP_EOL;
+    foreach ($answers->getPathToLineNumbers() as $path => $lineNumbers) {
+        $lineNumbers = implode(',',$lineNumbers);
+        echo "{$path} {$lineNumbers}",PHP_EOL;
     }
 
 }catch (\Exception $e){
-    echo $e->getMessage().PHP_EOL;
+    echo $e->getMessage(),PHP_EOL;
 }

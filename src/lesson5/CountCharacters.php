@@ -25,80 +25,63 @@ class CountCharacters
      */
     public function searchLines($dir): Answers
     {
-        $fileLists = $this->getFileLists($dir);
         $answer = new Answers();
-        foreach ($fileLists as $fileKey => $path) {
-            $nums = $this->search($this->getLines($path));
-            if (!empty($nums)) {
-                $answer->pair($fileKey,$path,$nums);
-            }
-        }
-
+        $this->collectAnswers($dir, $answer);
         return $answer;
     }
 
     /**
      * 指定したパスの中のファイルパスを再帰的に取得します
      *
-     * @param $dir
-     * @return array
+     * @param string $dir
+     * @param Answers $answer
      */
-    public function getFileLists($dir): array
+    public function collectAnswers(string $dir, Answers $answer): void
     {
         $files = scandir($dir);
         $files = array_filter($files, fn($file) => !in_array($file, ['.', '..']));
 
-        $fileLists = [];
         foreach ($files as $file) {
-            $path = rtrim($dir, '/') . '/' . $file;
+            //ディレクトリセパレーター
+            $path = rtrim($dir, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $file;
             if (is_file($path)) {
-                $fileLists[] = $path;
+                $lineNumbers = $this->getMatchedLineNumbers($path);
+                if (!empty($lineNumbers)) {
+                    $answer->add($path, $lineNumbers);
+                }
             }
             if (is_dir($path)) {
-                $fileLists = array_merge($fileLists, $this->getFileLists($path));
+                $this->collectAnswers($path, $answer);
             }
         }
 
-        return $fileLists;
+        //キーがファイルパスでバリューにターゲットに一致する文字列の行番号を配列で返す
+        //Answer = アキュムレーター(Accumulator)
     }
 
     /**
-     * 与えられたパスの内容を配列で返します
+     * ターゲットに一致した行番号を配列で返します
      *
      * @param $path
      * @return array
      */
-    public function getLines($path): array
+    public function getMatchedLineNumbers($path): array
     {
         $handle = fopen($path, "r");
 
         try {
             $lines = [];
+            $lineCounter = 1;
             while ($line = fgets($handle)) {
-                $lines[] = trim($line);
+                if (preg_match('/' . $this->target . '/', $line)) {
+                    $lines[] = $lineCounter;
+                }
+                $lineCounter++;
             }
         } finally {
             fclose($handle);
         }
         return $lines;
+        //ターゲットに一致した行番号を配列で返す
     }
-
-
-    /**
-     * 与えられた複数行に指定の文字列が一致した場合その行数を配列で返します
-     *
-     * @param $lines
-     * @return array
-     */
-    public function search($lines): array
-    {
-        $lineNumbers = [];
-        foreach ($lines as $key => $line) {
-            if (preg_match('/' . $this->target . '/', $line)) {
-                $lineNumbers[] = $key + 1;
-            }
-        }
-        return $lineNumbers;
-    }
-
 }
