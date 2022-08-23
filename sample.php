@@ -19,32 +19,43 @@ function fact2(int $n)
     if ($n === 0) {
         return 1;
     }
+    echo '$n1 = '.$n,PHP_EOL;
     $x = fact2($n - 1);
+    echo '$n2 = '.$n,PHP_EOL;
+    echo '$x = '.$x,PHP_EOL;
     return $x * $n;
 }
 
-function fact3(int $n, int $acc)
-{
-    if ($n === 0) {
-        return $acc;
-    }
-    return fact3($n - 1, $n * $acc);
-}
-
-//末尾再起
-//なぜ2,4が同じなのか
-function fact4(int $n)
-{
-    return fact3($n, 1);
-}
-
-echo fact4($argv[1]), PHP_EOL;
-
+echo fact2($argv[1]), PHP_EOL;
 //fact2(3)
 //fact2(2) * 3
 //fact2(1) * 2 * 3
 //fact2(0) * 1 * 2 * 3
 //1 * 1 * 2 * 3
+
+//末尾再起 = 自分自身の呼び出しが末尾呼び出しとなっている再帰関数
+//演算結果を関数の引数としている
+function fact3(int $n, int $acc)
+{
+    if ($n === 0) {
+        return $acc;
+    }
+    echo '$n = '.$n,PHP_EOL;
+    echo '$acc = '.$acc,PHP_EOL;
+    return fact3($n - 1, $n * $acc);
+}
+
+function fact4(int $n)
+{
+    return fact3($n, 1);
+}
+
+//fact3(3,1)
+//fact3(2,3)
+//fact3(1,6)
+//fact4(0,6)
+echo fact4($argv[1]), PHP_EOL;
+
 
 
 //echo fact($argv[1]), PHP_EOL;

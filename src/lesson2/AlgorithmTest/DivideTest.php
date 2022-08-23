@@ -2,6 +2,7 @@
 
 namespace Yuki\lesson2\AlgorithmTest;
 
+use DivisionByZeroError;
 use PHPUnit\Framework\TestCase;
 use Yuki\lesson2\CalculateFactory;
 
@@ -27,9 +28,14 @@ class DivideTest extends TestCase
             '整数の場合' => [6, 2, 3],
             '四捨五入し切り上げる場合' => [9, 2, 5],
             '四捨五入し切り下げる場合' => [4, 3, 1],
-            //例外のテスト（別で切り出す必要がある）
-            '0で割る場合' => [3, 0, 0],
             '0が割られる場合' => [0, 5, 0],
         ];
+    }
+
+    public function testDivisionByZeroThrowsException(){
+        $this->expectException(DivisionByZeroError::class);
+        $calc = new CalculateFactory();
+        $calculate = $calc->create('/');
+        $calculate->calc(1, 0);
     }
 }
