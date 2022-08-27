@@ -1,5 +1,22 @@
-.idea
-
-# PHPUnit
-/.phpunit.cache
+/vendor
+.env
+.env.backup
 .phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+/.history
+.php-cs-fixer.cache
+
+## OSX template
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+Thumbs.db
