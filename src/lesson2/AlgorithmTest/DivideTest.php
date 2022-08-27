@@ -33,9 +33,11 @@ class DivideTest extends TestCase
     }
 
     public function testDivisionByZeroThrowsException(){
-        $this->expectException(DivisionByZeroError::class);
         $calc = new CalculateFactory();
         $calculate = $calc->create('/');
+
+        //直前で呼び出す
+        $this->expectException(DivisionByZeroError::class);
         $calculate->calc(1, 0);
     }
 }
