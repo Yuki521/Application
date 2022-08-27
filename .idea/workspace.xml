@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a16651db-b347-49f8-9413-9d422aa6d10f" name="変更" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1661587081" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="practice" />
+                    <option name="lastUsedInstant" value="1653894652" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="29bl1hyhuMWqDCiDTTkHF4RDi9l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="すべての場所" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/lesson3/SpecTypes" />
+      <recent name="$PROJECT_DIR$/src/lesson2/Algorithm" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lesson2/AlgorithmTest" />
+      <recent name="$PROJECT_DIR$/src/lesson2/Algorithm" />
+      <recent name="$PROJECT_DIR$/src/lesson1" />
+      <recent name="$PROJECT_DIR$/src/lesson4" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="デフォルトタスク">
+      <changelist id="a16651db-b347-49f8-9413-9d422aa6d10f" name="変更" comment="" />
+      <created>1653389454336</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653389454336</updated>
+      <workItem from="1653389456860" duration="6272000" />
+      <workItem from="1653401370131" duration="183000" />
+      <workItem from="1653439916233" duration="5753000" />
+      <workItem from="1653734619130" duration="5517000" />
+      <workItem from="1653785651652" duration="178000" />
+      <workItem from="1653785901146" duration="395000" />
+      <workItem from="1653893971418" duration="654000" />
+      <workItem from="1653894640508" duration="6901000" />
+      <workItem from="1654069069417" duration="3012000" />
+      <workItem from="1654338606205" duration="9260000" />
+      <workItem from="1654481162080" duration="4637000" />
+      <workItem from="1654487980587" duration="515000" />
+      <workItem from="1654651247277" duration="3617000" />
+      <workItem from="1654685098430" duration="1161000" />
+      <workItem from="1654735927603" duration="440000" />
+      <workItem from="1655258518254" duration="2131000" />
+      <workItem from="1655350440040" duration="41000" />
+      <workItem from="1656312514286" duration="4309000" />
+      <workItem from="1656321582524" duration="222000" />
+      <workItem from="1656321821436" duration="1046000" />
+      <workItem from="1657013121993" duration="948000" />
+      <workItem from="1657090673543" duration="1727000" />
+      <workItem from="1657202481339" duration="3719000" />
+      <workItem from="1657241777385" duration="158000" />
+      <workItem from="1657273621988" duration="4774000" />
+      <workItem from="1657328052959" duration="486000" />
+      <workItem from="1657448955708" duration="2675000" />
+      <workItem from="1657504904082" duration="184000" />
+      <workItem from="1657523127496" duration="3441000" />
+      <workItem from="1657685361471" duration="3156000" />
+      <workItem from="1657961617933" duration="6337000" />
+      <workItem from="1658019402894" duration="544000" />
+      <workItem from="1658289485714" duration="4040000" />
+      <workItem from="1658464354403" duration="1834000" />
+      <workItem from="1658502108884" duration="4480000" />
+      <workItem from="1658652883456" duration="610000" />
+      <workItem from="1658901691436" duration="1599000" />
+      <workItem from="1659325975762" duration="5801000" />
+      <workItem from="1659352161452" duration="560000" />
+      <workItem from="1659426737692" duration="584000" />
+      <workItem from="1659497517647" duration="594000" />
+      <workItem from="1659503580075" duration="939000" />
+      <workItem from="1659863971881" duration="2331000" />
+      <workItem from="1659946813001" duration="695000" />
+      <workItem from="1659962442332" duration="60000" />
+      <workItem from="1660029024533" duration="4449000" />
+      <workItem from="1660092385249" duration="2137000" />
+      <workItem from="1660095992467" duration="7909000" />
+      <workItem from="1660178651187" duration="6370000" />
+      <workItem from="1660694969121" duration="18098000" />
+      <workItem from="1660795484300" duration="50000" />
+      <workItem from="1660889810288" duration="1241000" />
+      <workItem from="1660891758718" duration="835000" />
+      <workItem from="1661239663383" duration="3664000" />
+      <workItem from="1661314030683" duration="6962000" />
+      <workItem from="1661406242544" duration="453000" />
+      <workItem from="1661587019626" duration="398000" />
+    </task>
+    <task id="LOCAL-00001" summary="add Calc">
+      <created>1653389570137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653389570137</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feature repl">
+      <created>1653393015236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653393015236</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add test">
+      <created>1653398213314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653398213314</updated>
+    </task>
+    <task id="LOCAL-00004" summary="arrange">
+      <created>1653398341403</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653398341403</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix namespace">
+      <created>1653398733418</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653398733418</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactoring">
+      <created>1653443318755</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653443318755</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ポリモーフィズム">
+      <created>1653736583194</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653736583194</updated>
+    </task>
+    <task id="LOCAL-00008" summary="getCal">
+      <created>1653895758554</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653895758554</updated>
+    </task>
+    <task id="LOCAL-00009" summary="q5">
+      <created>1653898362616</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653898362616</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactoring">
+      <created>1653898506417</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653898506417</updated>
+    </task>
+    <task id="LOCAL-00011" summary="q6">
+      <created>1654347387770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654347387770</updated>
+    </task>
+    <task id="LOCAL-00012" summary="q7">
+      <created>1654349500114</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654349500114</updated>
+    </task>
+    <task id="LOCAL-00013" summary="q8">
+      <created>1654485462933</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654485462933</updated>
+    </task>
+    <task id="LOCAL-00014" summary="リファクタリング">
+      <created>1654700449495</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654700449495</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add lesson4 qa1">
+      <created>1656322629097</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656322629097</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactoring">
+      <created>1656322795609</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656322795609</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add class">
+      <created>1657206396932</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657206396932</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add phpdoc">
+      <created>1657274040991</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1657274040991</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add answerClass">
+      <created>1657276463838</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657276463838</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix name">
+      <created>1657276537991</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1657276537991</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add lesson1 test">
+      <created>1657277069763</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1657277069763</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add test">
+      <created>1657277985846</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1657277985846</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add echo method">
+      <created>1657449564011</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1657449564011</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add test">
+      <created>1657526291551</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1657526291551</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix test">
+      <created>1657964990983</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1657964990983</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refactoring">
+      <created>1657967578633</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1657967578633</updated>
+    </task>
+    <task id="LOCAL-00027" summary="composer install">
+      <created>1657968255073</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1657968255073</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix name">
+      <created>1657968595987</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1657968595987</updated>
+    </task>
+    <task id="LOCAL-00029" summary="refactoring">
+      <created>1659864965677</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1659864965677</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add test">
+      <created>1659865826579</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1659865826579</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add test">
+      <created>1660041255652</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1660041255652</updated>
+    </task>
+    <task id="LOCAL-00032" summary="get file">
+      <created>1660052868023</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1660052868023</updated>
+    </task>
+    <task id="LOCAL-00033" summary="complete">
+      <created>1660185873877</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1660185873877</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add sample">
+      <created>1660695050742</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1660695050742</updated>
+    </task>
+    <task id="LOCAL-00035" summary="use scandir">
+      <created>1660696047073</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1660696047073</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add class">
+      <created>1660700330193</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1660700330193</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix with mentor">
+      <created>1660889829128</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1660889829128</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add test">
+      <created>1660889872455</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1660889872455</updated>
+    </task>
+    <task id="LOCAL-00039" summary="del test">
+      <created>1660890176312</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1660890176312</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add test for exception">
+      <created>1661245978552</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1661245978552</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add practice">
+      <created>1661587051633</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587051633</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <envs>
+      <env key="LANG" value="ja_JP.UTF8" />
+    </envs>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="getCal" />
+    <MESSAGE value="q5" />
+    <MESSAGE value="q6" />
+    <MESSAGE value="q7" />
+    <MESSAGE value="q8" />
+    <MESSAGE value="リファクタリング" />
+    <MESSAGE value="add lesson4 qa1" />
+    <MESSAGE value="add phpdoc" />
+    <MESSAGE value="add answerClass" />
+    <MESSAGE value="add lesson1 test" />
+    <MESSAGE value="add echo method" />
+    <MESSAGE value="fix test" />
+    <MESSAGE value="composer install" />
+    <MESSAGE value="fix name" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="get file" />
+    <MESSAGE value="complete" />
+    <MESSAGE value="add sample" />
+    <MESSAGE value="use scandir" />
+    <MESSAGE value="add class" />
+    <MESSAGE value="fix with mentor" />
+    <MESSAGE value="add test" />
+    <MESSAGE value="del test" />
+    <MESSAGE value="add test for exception" />
+    <MESSAGE value="add practice" />
+    <option name="LAST_COMMIT_MESSAGE" value="add practice" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
