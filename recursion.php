@@ -41,19 +41,22 @@ function append($array1, $array2)
         return [];
     }
 
-    $shifted[] = array_shift($array1);
-
-    if ($array1 == [] && $array2 !== []) {
-        $shifted[] = array_shift($array2);
+    if($array1 != []){
+        $shifted = array_shift($array1);
+        append($array1, $array2);
+    }else{
+        $shifted = array_shift($array2);
     }
+    $appended = append($array1, $array2);
 
-    return array_merge($shifted, append($array1, $array2));
+    return array_merge([$shifted], $appended);
 }
 
 //append([],[]) -> []
 //append([1,2,3], [4,5,6]) -> [1,2,append([3],[4,5,6])] -> [1,2,3,4,append([],[5,6])]
 
-//var_dump(append([1, 2, 3], [4, 5, 6]));
+//print_r(append([1, 2, 3], [4, 5, 6]));
+//print_r(append([], [4, 5, 6]));
 
 
 function filter($array, $closure)
@@ -71,7 +74,9 @@ function filter($array, $closure)
     return array_merge([$shift],$recursion);
 }
 
-var_dump(filter([1,2,3,4], fn ($n) => $n % 2 == 0));
 
 //filter([])->[]
-//filter([1,2,3,4], fn ($n) => $n % 2 == 0) -> [2, fn(3) => 3 % == 0(false)]
+//fn(3) => 3 % == 0(false)
+//filter([1,2,3,4], fn ($n) => $n % 2 == 0) -> [2, fn(4) => 4 % == 0(true)]
+
+//print_r(filter([1,2,3,4], fn ($n) => $n % 2 == 0));
